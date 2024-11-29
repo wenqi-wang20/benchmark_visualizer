@@ -1,0 +1,82 @@
+[
+    {
+        "dataset_name": "CVBench",
+        "url": "https://arxiv.org/abs/2406.16860",
+        "description": "Spatial Relationship (2D), Object Counting (2D), Depth Order (3D), Relative Distance (3D)",
+        "examples": [
+            {
+                "spatial_type": "spatial relatonship",
+                "origin": "COCO",
+                "images": [
+                    "sample_data/CVBench/spatial_relationship1.png"
+                ],
+                "Question/Annotation": "Where is the cave located with respect to the trees?",
+                "Answer": "Under"
+            },
+            {
+                "spatial_type": "object count",
+                "origin": "COCO",
+                "images": [
+                    "sample_data/CVBench/object_count1.png"
+                ],
+                "Question/Annotation": "How many cars are there in the image?",
+                "Answer": "3"
+            },
+            {
+                "spatial_type": "depth order",
+                "origin": "Omini3D",
+                "images": [
+                    "sample_data/CVBench/depth_order1.png"
+                ],
+                "Question/Annotation": "Which is closer to the camera, sink or pillow?",
+                "Answer": "The pillow."
+            },
+            {
+                "spatial_type": "relative distance",
+                "origin": "COCO",
+                "images": [
+                    "sample_data/CVBench/relative_distance1.png"
+                ],
+                "Question/Annotation": "Which is closer to the chair, refrigerator or door?",
+                "Answer": "The refrigerator."
+            }
+        ]
+    },
+    {
+        "dataset_name": "OpenEQA",
+        "url": "https://open-eqa.github.io/",
+        "description": "Open vocabulary embodied question answering benchmark.",
+        "examples": [
+            {
+                "spatial_type": "",
+                "origin": "",
+                "images": [],
+                "Question/Annotation": "",
+                "Answer": ""
+            },
+            {
+                "spatial_type": "",
+                "origin": "",
+                "images": [],
+                "Question/Annotation": "",
+                "Answer": ""
+            }
+        ]
+    },
+    {
+        "dataset_name": "MMTBench",
+        "url": "https://arxiv.org/pdf/2404.16006",
+        "description": "covering 32 core meta-tasks and 162 subtasks in multimodal understandin",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [
+                    "sample_data/MMTBench/object_count1.jpg"
+                ],
+                "Question/Annotation": "Please count how many donuts tray in this image.. Please select the correct answer from the following options:  A. 11 B. 12 C. 9 D. 10",
+                "Answer": "B. 12"
+            }
+        ]
+    }
+]
