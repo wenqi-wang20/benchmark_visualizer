@@ -3,6 +3,7 @@ from PIL import Image
 import pandas as pd
 import json
 import os
+import pygit2
 
 # designe the data json format
 # [{
@@ -41,7 +42,8 @@ def ensure_images_dir():
 
 # Save uploaded image
 def save_uploaded_image(uploaded_file, name):
-    ensure_images_dir()
+    # ensure_images_dir()
+    os.makedirs(os.path.dirname(name), exist_ok=True)
     file_path = name
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
@@ -65,11 +67,13 @@ st.title("Spatial Related Dataset Viewer and Editor")
 st.sidebar.title("Datasets")
 dataset_names = [d["dataset_name"] for d in data]
 selected_dataset = st.sidebar.selectbox("Select a dataset", 
-                                        options=dataset_names + ["Add New Dataset"],)
+                                        options=["Add New Dataset"] + dataset_names,)
                                         # index=dataset_names.index(st.session_state.selected_dataset) if st.session_state.selected_dataset in dataset_names else 0)
 # Update session state only when the selection changes
+print(selected_dataset, st.session_state.selected_dataset)
 if selected_dataset != st.session_state.selected_dataset:
     st.session_state.selected_dataset = selected_dataset
+    # selected_dataset = st.session_state.selected_dataset
     
 
 # Display spatial types overview
@@ -148,7 +152,7 @@ elif selected_dataset == "Add New Dataset":
                 "examples": []
             }
             data.append(new_dataset)
-            os.makedirs(f"sample_data/{dataset_name}")
+            os.makedirs(f"sample_data/{dataset_name}", exist_ok=True)
             save_data(DATA_FILE, data)
             st.session_state.selected_dataset = dataset_name
             st.success(f"Dataset '{dataset_name}' added successfully!")
@@ -231,9 +235,9 @@ else:
         st.rerun()
         st.query_params["selected"] = st.session_state.selected_dataset
 
-    # # Save changes
-    # if st.button("Save Changes"):
-    #     save_data(DATA_FILE, data)
-    #     st.success("Changes saved successfully!")
-    #     st.rerun()
-    #     st.query_params["selected"] = st.session_state.selected_dataset
+    # Save changes
+    if st.button("Save Changes"):
+        save_data(DATA_FILE, data)
+        st.success("Changes saved successfully!")
+        st.rerun()
+        st.query_params["selected"] = st.session_state.selected_dataset

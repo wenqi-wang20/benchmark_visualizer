@@ -5,7 +5,7 @@
         "description": "Spatial Relationship (2D), Object Counting (2D), Depth Order (3D), Relative Distance (3D)",
         "examples": [
             {
-                "spatial_type": "spatial relatonship",
+                "spatial_type": "spatial relationship",
                 "origin": "COCO",
                 "images": [
                     "sample_data/CVBench/spatial_relationship1.png"
@@ -32,7 +32,7 @@
                 "Answer": "The pillow."
             },
             {
-                "spatial_type": "relative distance",
+                "spatial_type": "relative relation",
                 "origin": "COCO",
                 "images": [
                     "sample_data/CVBench/relative_distance1.png"
@@ -76,6 +76,291 @@
                 ],
                 "Question/Annotation": "Please count how many donuts tray in this image.. Please select the correct answer from the following options:  A. 11 B. 12 C. 9 D. 10",
                 "Answer": "B. 12"
+            }
+        ]
+    },
+    {
+        "dataset_name": "TouchStone",
+        "url": "https://arxiv.org/pdf/2308.16890",
+        "description": "https://benchmarkvisualizer-frkv48ey25eju7bpe86rsv.streamlit.app/",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [
+                    "sample_data/TouchStone/1.jpg"
+                ],
+                "Question/Annotation": "How many goblets are there in the picture?\n",
+                "Answer": "5"
+            },
+            {
+                "spatial_type": "relative relation",
+                "origin": "",
+                "images": [
+                    "sample_data/TouchStone/1.jpg"
+                ],
+                "Question/Annotation": "Which planet is the biggest in the picture?",
+                "Answer": ""
+            }
+        ]
+    },
+    {
+        "dataset_name": "MME-RealWorld",
+        "url": "https://arxiv.org/pdf/2408.13257",
+        "description": "5 key domains and 43 subtasks highly related to real-world scenarios",
+        "examples": []
+    },
+    {
+        "dataset_name": "GEM",
+        "url": "https://arxiv.org/pdf/2106.09889",
+        "description": "GEM-I contains 1.2 million {Query, Image, Title} triplets in 20 different languages for text-to-image retrieval and image captioning tasks. GEM-V contains 99K {Query, Video, Title} triplets in 30 languages for text-to-video retrieval and video captioning tasks.",
+        "examples": []
+    },
+    {
+        "dataset_name": "Seed-Bench",
+        "url": "https://arxiv.org/pdf/2307.16125",
+        "description": "12 evaluation dimensions covering both the spatial and\ntemporal understanding",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [
+                    "sample_data/Seed-Bench/object_count1.jpg"
+                ],
+                "Question/Annotation": "How many people are at the event?\n A. 1\n B. 2\n C. 4\n D. 3",
+                "Answer": "D. 3"
+            },
+            {
+                "spatial_type": "object location",
+                "origin": "",
+                "images": [
+                    "sample_data/Seed-Bench/object_location1.jpg"
+                ],
+                "Question/Annotation": "Where is the dog located in the living room?\n A. On the fireplace\n B. On the table\n C. On the chair\n D. On the rug",
+                "Answer": " D. On the rug"
+            },
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [
+                    "sample_data/Seed-Bench/spatial_relationship1.jpg"
+                ],
+                "Question/Annotation": "Where is the tree in relation to the house?\n A. In front of the house\n B. Behind the house\n C. Inside the house\n D. Left to the house",
+                "Answer": " A. In front of the house"
+            }
+        ]
+    },
+    {
+        "dataset_name": "LVLM-eHub",
+        "url": "https://arxiv.org/pdf/2306.09265",
+        "description": "quantitative capability performance across six distinct aspects: Visual Reasoning, Visual Knowledge Acquisition, Visual Perception, Visual Commonsense, Object Hallucination, Embodied Intelligence",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "COCO",
+                "images": [],
+                "Question/Annotation": "",
+                "Answer": ""
+            },
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [],
+                "Question/Annotation": "",
+                "Answer": ""
+            }
+        ]
+    },
+    {
+        "dataset_name": "SpatialRGBT-Bench",
+        "url": "https://arxiv.org/abs/2406.01584",
+        "description": "3D spatial cognition, spatial reasoning VQA benchmark\n",
+        "examples": [
+            {
+                "spatial_type": "relative relation",
+                "origin": "",
+                "images": [
+                    "sample_data/SpatialRGBT-Bench/relative_relation1.jpg"
+                ],
+                "Question/Annotation": "Which of these four: 3,4,5,6 is the tallest?",
+                "Answer": "6 is the tallest."
+            },
+            {
+                "spatial_type": "metric measurement",
+                "origin": "",
+                "images": [
+                    "sample_data/SpatialRGBT-Bench/metric_measurement1.jpg"
+                ],
+                "Question/Annotation": "What is the height of 4?",
+                "Answer": "4 is 1.38 meters tall."
+            },
+            {
+                "spatial_type": "spatial reasoning",
+                "origin": "",
+                "images": [
+                    "sample_data/SpatialRGBT-Bench/spatial_reasoning1.jpg"
+                ],
+                "Question/Annotation": " If you are riding a motorcycle with 36 inches wide, do you think you can pass through the area between 3 and 4?",
+                "Answer": "The distance between 3 and 4 is  38.95 inches, so yes, you can pass  through the area between 3 and .4  since the motorcycle is narrower  than the distance between them."
+            }
+        ]
+    },
+    {
+        "dataset_name": "MVP-Bench",
+        "url": "https://arxiv.org/pdf/2410.04345",
+        "description": "investigating (1) the performance gap between high- and low-level visual perceptions and (2) the difference in visual understanding abilities on natural and manipulated images",
+        "examples": []
+    },
+    {
+        "dataset_name": "BLINK",
+        "url": "https://arxiv.org/pdf/2404.12390",
+        "description": "Most of the Blink tasks can be solved by humans \u201cwithin a blink\u201d (e.g., relative depth estimation, visual correspondence, forensics detection, and multi-view reasoning)",
+        "examples": [
+            {
+                "spatial_type": "multi-view reasoning",
+                "origin": "",
+                "images": [
+                    "sample_data/BLINK/multi-view_reasoning1.jpg"
+                ],
+                "Question/Annotation": " Is camera moving right?",
+                "Answer": "Yes."
+            },
+            {
+                "spatial_type": "depth order",
+                "origin": "",
+                "images": [
+                    "sample_data/BLINK/depth_order1.jpg"
+                ],
+                "Question/Annotation": " Which point is closer?",
+                "Answer": "B"
+            },
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [
+                    "sample_data/BLINK/1.jpg"
+                ],
+                "Question/Annotation": "How many fingers are in front of the  bathtub?",
+                "Answer": "3 "
+            },
+            {
+                "spatial_type": "object location",
+                "origin": "",
+                "images": [
+                    "sample_data/BLINK/object_location1.jpg"
+                ],
+                "Question/Annotation": " Which bounding box more  accurately encloses the bun?",
+                "Answer": "A"
+            },
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [
+                    "sample_data/BLINK/spatial_relationship1.jpg"
+                ],
+                "Question/Annotation": " Is the bed at the right side of the dining  table? ",
+                "Answer": "Yes"
+            }
+        ]
+    },
+    {
+        "dataset_name": "MMIU",
+        "url": "https://arxiv.org/pdf/2408.02718",
+        "description": "tests 7 distinctive multi-image relationships (Low-level\nsemantic relationships, High-level (objective) relationships among objects, Highlevel (subjective) relationships, Continuous temporal relationships, Discrete event sequence relationships, 2D spatial relationships, 3D spatial relationships) covering 52 diverse multi-image tasks",
+        "examples": []
+    },
+    {
+        "dataset_name": "MMBench",
+        "url": "https://arxiv.org/pdf/2307.06281",
+        "description": "three levels of ability dimensions, encompassing 20 distinct leaf abilities",
+        "examples": [
+            {
+                "spatial_type": "",
+                "origin": "",
+                "images": [
+                    "sample_data/MMBench/1.jpg"
+                ],
+                "Question/Annotation": "Which corner is the juice?\n A. Up\n B. Down\n C. Left\n D. Right",
+                "Answer": "D"
+            },
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [
+                    "sample_data/MMBench/spatial_relationship1.jpg"
+                ],
+                "Question/Annotation": "How many tennis balls are placed on the tennis racket?",
+                "Answer": "C. 3"
+            }
+        ]
+    },
+    {
+        "dataset_name": "MME",
+        "url": "https://arxiv.org/pdf/2306.13394",
+        "description": "perception and cognition abilities on a total of 14 subtasks",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [],
+                "Question/Annotation": "Are there 2 pieces of pizza in this image?",
+                "Answer": "No, there is only one piece of pizza in this image"
+            },
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [
+                    "sample_data/MME/spatial_relationship1.jpg"
+                ],
+                "Question/Annotation": "Is the motorcycle on the right side of the bus?",
+                "Answer": "Yes"
+            }
+        ]
+    },
+    {
+        "dataset_name": "MMStar",
+        "url": "https://arxiv.org/abs/2403.20330",
+        "description": "6 core capabilities and 18 detailed axes. Coarse Perception, Fine-grained Perception, Instance Reasoning, Logical Reasoning, Science & Technology, Mathematics",
+        "examples": []
+    },
+    {
+        "dataset_name": "MM-Vet",
+        "url": "https://arxiv.org/pdf/2308.02490",
+        "description": "six core VL capabilities: Recognition, Knowledge, OCR, Spatial awareness, Language generation, Math",
+        "examples": [
+            {
+                "spatial_type": "spatial relationship",
+                "origin": "",
+                "images": [
+                    "sample_data/MM-Vet/spatial_relationship1.jpg"
+                ],
+                "Question/Annotation": "On the right desk, what is to the left of the laptop?",
+                "Answer": "table lamp <OR> desk lamp"
+            },
+            {
+                "spatial_type": "relative relation",
+                "origin": "",
+                "images": [
+                    "sample_data/MM-Vet/relative_relation1.jpg"
+                ],
+                "Question/Annotation": "Does the person bigger than the car?",
+                "Answer": "no"
+            }
+        ]
+    },
+    {
+        "dataset_name": "MuirBench",
+        "url": "https://arxiv.org/abs/2406.09411",
+        "description": "12 distinctive multi-image understanding tasks",
+        "examples": [
+            {
+                "spatial_type": "object count",
+                "origin": "",
+                "images": [
+                    "sample_data/MuirBench/object_count1.jpg"
+                ],
+                "Question/Annotation": "How many vases have a painted design all over the images?",
+                "Answer": "One"
             }
         ]
     }
